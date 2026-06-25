@@ -1,60 +1,60 @@
-# Master Styles
+# Master Styles / 视觉风格引擎
 
-> A style-routing skill for translating vague aesthetic direction into usable visual tokens and prompt language.
+> 把“高级一点、纸感一点、像信息图但别 PPT”这种模糊审美，翻译成可复用的视觉 token 和提示词。
 
-Master Styles is the shared style engine: it maps mood, domain, medium, era, material, color, composition, and abstraction into concrete visual directions that other skills can reuse.
+Master Styles 是这批视觉 skill 的共享风格路由器。它不负责某一种具体产物，而是帮其它 skill 选择材料、构图、线条、颜色、字体感、抽象程度和风格谱系。适合在做封面、配图、金句卡、表情包、排名卡前先定视觉方向。
 
-## Examples
+## 示例图
 
-<p><img src="examples/images/master-styles-style-atlas.png" alt="Master Styles style atlas" width="100%"><br><sub>Master Styles style atlas</sub></p>
+<p><img src="examples/images/master-styles-style-atlas.png" alt="视觉风格谱系示例" width="100%"><br><sub>视觉风格谱系示例</sub></p>
 
-## What It Does
+## 它能做什么
 
-- Route visual requests into style families without copying living artists or protected IP.
-- Blend style tokens such as Swiss grid, risograph, Bauhaus geometry, blueprint, paper cutout, or editorial diagram.
-- Turn fuzzy taste words into concrete color, material, layout, and typography decisions.
-- Provide reusable style specs for covers, figures, cards, stickers, and diagrams.
+- 把模糊审美词拆成颜色、材质、构图、线条、字体、空间和抽象度。
+- 路由到 Swiss grid、risograph、Bauhaus geometry、blueprint、paper cutout、editorial diagram 等风格族。
+- 避免直接模仿在世艺术家或第三方 IP，而是抽象出合法可复用的风格 token。
+- 为其它 skill 输出统一 style spec。
 
-## Install
+## 安装
 
-Clone this repository into your local Codex skills folder:
+把这个仓库克隆到本机 Codex skills 目录：
 
 ```bash
 mkdir -p ~/.codex/skills
 git clone https://github.com/Alexsun1one/master-styles.git ~/.codex/skills/master-styles
 ```
 
-If your agent expects a nested skill directory instead of a direct clone, copy the folder that contains `SKILL.md` into its skills directory.
+如果你的 Agent 使用其它 skills 目录，也可以把包含 `SKILL.md` 的这个仓库复制过去。
 
-## Use
+## 怎么用
 
-Example request:
+示例请求：
 
 ```text
-Use master-styles to create a style spec for an AI workflow illustration. Compare Swiss grid, risograph paper, Bauhaus geometry, editorial diagram, blueprint, and paper cutout routes.
+用 master-styles 给一张 AI 工作流配图制定视觉方向。比较网格、纸感、几何、编辑图解、蓝图、剪纸六种路线，并推荐最适合公众号正文的一种。
 ```
 
-The skill entry point is [`SKILL.md`](SKILL.md). Supporting rules live in [`references/`](references/) when this repo includes them; helper scripts live in [`scripts/`](scripts/) when available.
+Skill 入口是 [`SKILL.md`](SKILL.md)。细则在 [`references/`](references/)；如果这个仓库带脚本，脚本在 [`scripts/`](scripts/)。
 
-## Quality Bar
+## 质量要求
 
-- The image must explain a concrete idea, not merely decorate the page.
-- Chinese text should be readable at the actual publishing size.
-- The output should keep a stable style system across a set while letting each image fit its topic.
-- Generated examples are prompts and visual references, not fixed templates.
+- 先服务内容，再服务风格；图必须解释一个具体想法。
+- 中文默认要可读，标题、caption、标签不能只当装饰纹理。
+- 同一组图要风格统一，但每张图要贴合自己的段落/用途。
+- 示例图是工作流参考，不是唯一模板。
 
-## WeChat
+## 公众号
 
-More writeups, examples, and AI workflow notes are published on my WeChat official account. This is the real QR/search card used for the account, included as a normal bitmap asset rather than a stylized fake code.
+更完整的拆解、提示词、案例复盘、AI 写作和产品实践，我会继续写在公众号里。下面是我的真实公众号二维码/搜一搜卡片，不是仿造的装饰二维码。
 
 <p align="center">
   <img src="assets/wechat-official-account.png" alt="微信搜一搜：正在逐渐AI化" width="720">
 </p>
 
-## License
+## 开源协议
 
-MIT. See [`LICENSE`](LICENSE).
+MIT。见 [`LICENSE`](LICENSE)。
 
-## Notice
+## 声明
 
-This is an original open-source skill package by Sun Wuyuan / Alexsun1one. It is not affiliated with OpenAI, GitHub, WeChat, or any referenced platform. Avoid using it to imitate protected characters, living artists, or third-party brand assets without permission.
+这是 Sun Wuyuan / Alexsun1one 的原创开源 Skill 包。它不隶属于 OpenAI、GitHub、微信或任何被提及的平台。请不要用它去复制受保护 IP、仿冒在世艺术家，或暗示不存在的品牌背书。
