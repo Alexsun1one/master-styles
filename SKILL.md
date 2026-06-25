@@ -35,6 +35,7 @@ The recognizable thing about a master is the rule, not the picture. Müller-Broc
 8. Build the final image prompt with `references/prompt-template.md`, applying the tokens to the user's subject.
 9. Generate one image at a time. When the host image includes title, label, seal, tier mark, or caption text, render that text natively inside the generated image; do not default to post-production overlay.
 10. Run QA with `references/qa-checklist.md`; regenerate if it reproduces a famous work, reads as costume pastiche, mixes too many styles, buries the subject, or mangles native text.
+11. For README/gallery/showcase images, show applied style transfer on real subjects, not only abstract style charts. The viewer should see how the same tea, poem, ranking, cover, or quote changes through material, grid, light, color, and line tokens.
 
 ## Token Transfer Test
 

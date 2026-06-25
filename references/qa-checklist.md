@@ -28,6 +28,7 @@ Then the objective bullets:
 - The restraint principle is visibly kept (the master's refusal — no gradients, no diagonal,
   no environment, no decoration, etc.).
 - Any text is clean and correct.
+- If this is for a README/gallery/showcase, the image applies the style tokens to a real subject rather than displaying abstract process boxes. The subject remains recognizable before the style vocabulary is explained.
 
 ## Regenerate
 
